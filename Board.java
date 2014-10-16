@@ -15,7 +15,8 @@ public class Board {
 		return false; // TODO
 	}
 	
-	public void moveTiles(int direction) { //Left = 1,  Right = 2,  Up = 3,  Down = 4,  Error = 0
+	public void moveTiles(int direction) { 
+		//Left = 1,  Right = 2,  Up = 3,  Down = 4,  Error = 0
 		// TODO Auto-generated method stub
 	}
 
@@ -39,6 +40,5 @@ public class Board {
 
 	public void spawnTile() {
 		// TODO Auto-generated method stub
-		
 	}
 }
