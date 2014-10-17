@@ -6,7 +6,7 @@ public class User {
 	
 	public int getInput() {
 		//Left = 1,  Right = 2,  Up = 3,  Down = 4,  Error = 0
-		// TODO Auto-generated method stub
-		return 0;
+		int input = //TODO
+		return input;
 	}
 }

@@ -6,7 +6,7 @@ public class Game {
 	 */
 
 	/*Use the main loop to:
-	 * 	Spawn New Tile
+	 *  Spawn New Tile
 	 *  Display Board and Tiles
 	 *  Move Tiles based on Input
 	 *  Check That Game isn't Over
@@ -25,13 +25,13 @@ public class Game {
 		lost = false;
 		score = 0;
 		
-		board.spawnTile();
-		
 		while(!lost) {
 			board.spawnTile();
 			board.display();
-			board.moveTiles(user.getInput()); //Left = 1,  Right = 2,  Up = 3,  Down = 4,  Error = 0
+			board.moveTiles(user.getInput());
+			//Left = 1,  Right = 2,  Up = 3,  Down = 4,  Error = 0
 			lost = board.checkLost();
 		}
+		//TODO add "New Game" option
 	}
 }
