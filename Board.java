@@ -20,9 +20,31 @@ public class Board {
 		return false; //TODO
 	}
 	
-	public void moveTiles(int direction) { 
+	public boolean moveTiles(int direction) { 
 		//Left = 1,  Right = 2,  Up = 3,  Down = 4,  Error = 0
-		//TODO Auto-generated method stub
+		switch(direction) {
+			case 0:
+				return false;
+				break;
+			case 1:
+				moveTilesLeft();
+				return true;
+				break;
+			case 2:
+				moveTilesRight();
+				return true;
+				break;
+			case 3:
+				moveTilesUp();
+				return true;
+				break;
+			case 4:
+				moveTilesDown();
+				return true;
+				break;
+			default:
+				return false;
+				break;
 	}
 
 	public void moveTilesUp() {
