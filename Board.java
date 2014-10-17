@@ -6,14 +6,11 @@ public class Board {
 	 *  How you can move, or whether you've lost
 	 */
 
-	Tile[] tiles;
+	Tile[][] tiles;
 	
 
 	public board() {
-		tiles = {0,0,0,0,
-			 0,0,0,0,
-			 0,0,0,0,
-			 0,0,0,0};
+		tiles = new Tile[4][4];
 		spawnTile();
 		spawnTile();
 	}
