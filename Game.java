@@ -1,7 +1,6 @@
 public class Game {
 	/*Use this class to:
 	 *  Initialize Board
-	 *  Spawn 1 Tile
 	 *  Start Main Loop
 	 */
 
@@ -20,8 +19,8 @@ public class Game {
 	public int score;
 	
 	public Game() {
-		Board board = new Board();
-		User user = new User();
+		Board  board  = new Board();
+		User   user   = new User();
 		Window window = new Window();
 		lost = false;
 		score = 0;
