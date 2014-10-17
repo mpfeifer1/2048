@@ -41,14 +41,8 @@ public class Board {
 		//TODO
 	}
 
-	public void display() {
-		//TODO
-		
-	}
-
 	public boolean checkLost() {
-		//TODO
-		return false;
+		return !canMove;
 	}
 	
 	public boolean checkWon() {
@@ -60,6 +54,13 @@ public class Board {
 	}
 
 	public void spawnTile() {
-		//TODO
+		int nulls = 0;
+		for(Tile tile : tiles {
+			if(tile == null)
+				nulls++
+			}
+		}
+		//TODO set "n" to randint between 1 and nulls
+		//place tile on "n"th null square
 	}
 }

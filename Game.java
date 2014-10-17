@@ -22,14 +22,16 @@ public class Game {
 	public Game() {
 		Board board = new Board();
 		User user = new User();
+		Window window = new Window();
 		lost = false;
 		score = 0;
 		
 		while(!lost) {
 			board.spawnTile();
-			board.display();
+			Window.display(board);
 			board.moveTiles(user.getInput());
 			//Left = 1,  Right = 2,  Up = 3,  Down = 4,  Error = 0
+			Window.display(board)
 			lost = board.checkLost();
 		}
 		//TODO add "New Game" option
