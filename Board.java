@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Board {
 	/*This Class should contain:
 	 *  The Tiles
@@ -8,25 +6,51 @@ public class Board {
 	 *  How you can move, or whether you've lost
 	 */
 
-	ArrayList<Tile> tiles = new ArrayList<Tile>();
+	Tile[] tiles;
+	
+
+	public board() {
+		tiles = {0,0,0,0,
+			 0,0,0,0,
+			 0,0,0,0,
+			 0,0,0,0};
+		spawnTile();
+		spawnTile();
+	}
 	
 	
 	public boolean canMove() {
-		return false; // TODO
+		return false; //TODO
 	}
 	
 	public void moveTiles(int direction) { 
 		//Left = 1,  Right = 2,  Up = 3,  Down = 4,  Error = 0
-		// TODO Auto-generated method stub
+		//TODO Auto-generated method stub
+	}
+
+	public void moveTilesUp() {
+		//TODO
+	}
+	
+	public void moveTilesDown() {
+		//TODO
+	}
+
+	public void moveTilesLeft() {
+		//TODO
+	}
+
+	public void moveTilesRight {
+		//TODO
 	}
 
 	public void display() {
-		// TODO Auto-generated method stub
+		//TODO
 		
 	}
 
 	public boolean checkLost() {
-		// TODO Auto-generated method stub
+		//TODO
 		return false;
 	}
 	
@@ -39,6 +63,6 @@ public class Board {
 	}
 
 	public void spawnTile() {
-		// TODO Auto-generated method stub
+		//TODO
 	}
 }
