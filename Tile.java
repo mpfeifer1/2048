@@ -6,17 +6,23 @@ public class Tile {
 	 *  Color and Number of Tiles
 	 */
 
-	public int level;
-	public Color color;
-	
+	public int     level;
+	public Color   color;
+	public boolean active
+
 	public Tile() {
-		level = 1;
-		color = this.getColor(this);
+		active = false;
+		level  = 1;
+		color  = this.getColor(this);
 	}
-	
+
 	public Color getColor(Tile t) {
 		return new Color((212 - t.level),
 				 (229 - (17 * (t.level - 1))),
 				  0);
+	}
+
+	public getActive() {
+		return this.active;
 	}
 }

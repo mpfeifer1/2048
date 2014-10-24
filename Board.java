@@ -7,20 +7,20 @@ public class Board {
 	 */
 
 	Tile[][] tiles;
-	
+
 
 	public board() {
 		tiles = new Tile[4][4];
 		spawnTile();
 		spawnTile();
 	}
-	
-	
+
+
 	public boolean canMove() {
 		return false; //TODO
 	}
-	
-	public boolean moveTiles(int direction) { 
+
+	public boolean moveTiles(int direction) {
 		//Left = 1,  Right = 2,  Up = 3,  Down = 4,  Error = 0
 		switch(direction) {
 			case 0:
@@ -50,7 +50,7 @@ public class Board {
 	public void moveTilesUp() {
 		//TODO
 	}
-	
+
 	public void moveTilesDown() {
 		//TODO
 	}
@@ -66,7 +66,7 @@ public class Board {
 	public boolean checkLost() {
 		return !canMove;
 	}
-	
+
 	public boolean checkWon() {
 		for(Tile tile : tiles) {
 			if(tile.level >= 11)
@@ -77,11 +77,12 @@ public class Board {
 
 	public void spawnTile() {
 		int nulls = 0;
-		for(Tile tile : tiles {
-			if(tile == null)
+		for(Tile tile : tiles) {
+			if(tile.getActive() == false)
 				nulls++
 			}
 		}
+		int chosenTile = randInt(0, nulls);
 		//TODO set "n" to randint between 1 and nulls
 		//place tile on "n"th null square
 	}
