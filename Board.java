@@ -22,9 +22,19 @@ public class Board {
                 return randomNum;
         }
 
+	public boolean screenFilled() {
+		for(Tile tile : tiles) {
+			if(!tile.getActive()) {
+				return false;
+			}
+		}
+		return true;
+	}
 
 	public boolean canMove() {
-		return false; //TODO
+		if(!screenFilled) { //If matching tiles near each other
+			return false;
+		}
 	}
 
 	public boolean moveTiles(int direction) {
@@ -86,7 +96,7 @@ public class Board {
 		int nulls = 0;
 		for(Tile tile : tiles) {
 			if(tile.getActive() == false)
-				nulls++
+				nulls++;
 			}
 		}
 		int chosenTile = randInt(0, nulls);

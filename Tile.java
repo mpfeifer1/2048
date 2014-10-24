@@ -22,7 +22,7 @@ public class Tile {
 				  0);
 	}
 
-	public boolean getActive(Tile t) {
-		return t.active;
+	public boolean getActive() {
+		return this.active;
 	}
 }
