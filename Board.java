@@ -16,6 +16,13 @@ public class Board {
 	}
 
 
+        public int randInt(int min, int max) {
+                Random rand = new Random();
+                int randomNum = rand.nextInt((max - min) + 1) + min;
+                return randomNum;
+        }
+
+
 	public boolean canMove() {
 		return false; //TODO
 	}
@@ -72,7 +79,7 @@ public class Board {
 			if(tile.level >= 11)
 				return true;
 		}
-			return false;
+		return false;
 	}
 
 	public void spawnTile() {
