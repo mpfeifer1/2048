@@ -31,10 +31,15 @@ public class Board {
 		return true;
 	}
 
+	public boolean matchingTiles() {
+		//TODO
+	}
+
 	public boolean canMove() {
-		if(!screenFilled) { //If matching tiles near each other
-			return false;
+		if(!screenFilled) { // or If matching tiles near each other
+			return true;
 		}
+		return false;
 	}
 
 	public boolean moveTiles(int direction) {
