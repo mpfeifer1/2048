@@ -47,7 +47,7 @@ public class Board {
 			}
 		}
 		for(int column = 0; column++; column <= 3)
-			if(matchingTilesColumn(getColumn(column))) {
+			if(matchingTilesRow(getColumn(column))) {
 				matching = true;
 			}
 		}
@@ -55,11 +55,9 @@ public class Board {
 	}
 
 	public boolean matchingTilesRow(Tile[]) {
-		//TODO
-	}
-
-	public boolean matchingTilesColumn(Tile[]) {
-		//TODO
+		return (tilesMatch(Tile[0], Tile[1] ||
+			tilesMatch(Tile[1], Tile[2] ||
+			tilesMatch(Tile[2], Tile[3])
 	}
 
 	public boolean tilesMatch(Tile a, Tile b) {
