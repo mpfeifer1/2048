@@ -31,7 +31,23 @@ public class Board {
 		return true;
 	}
 
-	public boolean matchingTiles() {
+	public Tile[] getRow(int row) {
+		Tile[] tiles = tiles[][row];
+	}
+
+	public Tile[] getColumn(int column) {
+		Tile[] tiles = tiles[column][];
+	}
+
+	public boolean matchingTiles(Tile[][]) {
+		//TODO
+	}
+
+	public boolean matchingTilesRow(Tile[]) {
+		//TODO
+	}
+
+	public boolean matchingTilesColumn(Tile[]) {
 		//TODO
 	}
 
