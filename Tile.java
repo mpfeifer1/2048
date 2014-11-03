@@ -25,4 +25,8 @@ public class Tile {
 	public boolean getActive() {
 		return this.active;
 	}
+
+	public boolean getLevel() {
+		return this.level;
+	}
 }

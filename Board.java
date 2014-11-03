@@ -40,7 +40,18 @@ public class Board {
 	}
 
 	public boolean matchingTiles(Tile[][]) {
-		//TODO
+		boolean matching = false;
+		for(int row = 0; row++; row <= 3) {
+			if(matchingTilesRow(getRow(row))) {
+				matching = true;
+			}
+		}
+		for(int column = 0; column++; column <= 3)
+			if(matchingTilesColumn(getColumn(column))) {
+				matching = true;
+			}
+		}
+		return matching;
 	}
 
 	public boolean matchingTilesRow(Tile[]) {
@@ -49,6 +60,10 @@ public class Board {
 
 	public boolean matchingTilesColumn(Tile[]) {
 		//TODO
+	}
+
+	public boolean tilesMatch(Tile a, Tile b) {
+		return (a.getLevel() == b.getLevel());
 	}
 
 	public boolean canMove() {
