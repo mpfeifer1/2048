@@ -65,7 +65,7 @@ public class Board {
 	}
 
 	public boolean canMove() {
-		if(!screenFilled) { // or If matching tiles near each other
+		if(!screenFilled() || matchingTiles(tiles)) {
 			return true;
 		}
 		return false;
