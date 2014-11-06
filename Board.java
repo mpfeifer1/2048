@@ -54,10 +54,10 @@ public class Board {
 		return matching;
 	}
 
-	public boolean matchingTilesRow(Tile[]) {
-		return (tilesMatch(Tile[0], Tile[1] ||
-			tilesMatch(Tile[1], Tile[2] ||
-			tilesMatch(Tile[2], Tile[3])
+	public boolean matchingTilesRow(Tile[] tiles) {
+		return (tilesMatch(tiles[0], tiles[1] ||
+			tilesMatch(tiles[1], tiles[2] ||
+			tilesMatch(tiles[2], tiles[3])
 	}
 
 	public boolean tilesMatch(Tile a, Tile b) {
@@ -71,26 +71,26 @@ public class Board {
 		return false;
 	}
 
-	public boolean moveTiles(int direction) {
+	public boolean moveTiles(int direction, Tile[] tiles) {
 		//Left = 1,  Right = 2,  Up = 3,  Down = 4,  Error = 0
 		switch(direction) {
 			case 0:
 				return false;
 				break;
 			case 1:
-				moveTilesLeft();
+				moveTilesLeft(tiles);
 				return true;
 				break;
 			case 2:
-				moveTilesRight();
+				moveTilesRight(tiles);
 				return true;
 				break;
 			case 3:
-				moveTilesUp();
+				moveTilesUp(tiles);
 				return true;
 				break;
 			case 4:
-				moveTilesDown();
+				moveTilesDown(tiles);
 				return true;
 				break;
 			default:
@@ -98,20 +98,33 @@ public class Board {
 				break;
 	}
 
-	public void moveTilesUp() {
-		//TODO
+	public void moveTilesUp(Tile[] tiles) {
+		for(int column = 0; column++; column <= 3) {
+			//do stuff to
+			getColumn(tiles);
+		}
 	}
 
-	public void moveTilesDown() {
-		//TODO
+	public void moveTilesDown(Tile[] tiles) {
+                for(int column = 0; column++; column <= 3) {
+                        //do stuff to
+                        getColumn(tiles);
+                }
+
 	}
 
-	public void moveTilesLeft() {
-		//TODO
+	public void moveTilesLeft(Tile[] tiles) {
+                for(int row = 0; row++; row <= 3) {
+                        //do stuff to
+                        getRow(tiles);
+                }
 	}
 
 	public void moveTilesRight {
-		//TODO
+                for(int row = 0; row++; row <= 3) {
+                        //do stuff to
+                        getRow(tiles);
+                }
 	}
 
 	public boolean checkLost() {
