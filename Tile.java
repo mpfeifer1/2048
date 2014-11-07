@@ -13,6 +13,7 @@ public class Tile {
 	public Tile() {
 		active = false;
 		level  = 1; //Make possibility of being a level 2
+		// Level one = 2, Level two = 4, Level three = 8, etc...
 		color  = this.getColor(this);
 	}
 
@@ -28,5 +29,18 @@ public class Tile {
 
 	public boolean getLevel() {
 		return this.level;
+	}
+
+	public void setActive(Tile t, boolean newState) {
+		t.active = newState;
+	}
+
+	public void increaseLevel(Tile t) {
+		t.level++;
+	}
+
+	public void wipeTile(Tile t) {
+		t.level  = 0;
+		t.active = false;
 	}
 }
