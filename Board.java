@@ -1,9 +1,13 @@
 public class Board {
 	/*This Class should contain:
 	 *  The Tiles
-	 *  How the tiles move and spawn
-	 *  Tile Spawn
-	 *  How you can move, or whether you've lost
+	 *  Tile Moving
+	 *  Tile Spawning
+	 *  Getting and setting rows and tiles
+	 *  Checking for matching tiles
+	 *  How you can move
+	 *  If you've lost
+	 *  Whether The Screen is full
 	 */
 
 	Tile[][] tiles;
@@ -149,12 +153,13 @@ public class Board {
 	}
 
 	public void spawnTile() {
+		//Add check for whether screen is full (just to be sure)
 		boolean set = false;
 		Random generator = new Random();
 		while(!set) {
-			int row    = generator.nextInt(4);
-			int column = generator.nextInt(4);
-			int level  = generator. //Finish This
+			int row    = randInt(0,3);
+			int column = randInt(0,3);
+			int level  = randInt(); //Finish This
 			if (!tiles[column][row].getActive()) {
 				tiles[column][row] = new Tile();
 				set = true;
