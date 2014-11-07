@@ -110,14 +110,14 @@ public class Board {
 	public void moveTilesUp(Tile[] tiles) {
 		for(int column = 0; column++; column <= 3) {
 			//do stuff to
-			getColumn(tiles);
+			setColumn(getColumn(tiles));
 		}
 	}
 
 	public void moveTilesDown(Tile[] tiles) {
                 for(int column = 0; column++; column <= 3) {
                         //do stuff to
-                        getColumn(tiles);
+                        setColumn(getColumn(tiles));
                 }
 
 	}
@@ -125,14 +125,14 @@ public class Board {
 	public void moveTilesLeft(Tile[] tiles) {
                 for(int row = 0; row++; row <= 3) {
                         //do stuff to
-                        getRow(tiles);
+                        setRow(getRow(tiles));
                 }
 	}
 
 	public void moveTilesRight {
                 for(int row = 0; row++; row <= 3) {
                         //do stuff to
-                        getRow(tiles);
+                        setRow(getRow(tiles));
                 }
 	}
 
@@ -149,14 +149,16 @@ public class Board {
 	}
 
 	public void spawnTile() {
-		int nulls = 0;
-		for(Tile tile : tiles) {
-			if(tile.getActive() == false)
-				nulls++;
+		boolean set = false;
+		Random generator = new Random();
+		while(!set) {
+			int row    = generator.nextInt(4);
+			int column = generator.nextInt(4);
+			int level  = generator. //Finish This
+			if (!tiles[column][row].getActive()) {
+				tiles[column][row] = new Tile();
+				set = true;
 			}
 		}
-		int chosenTile = randInt(0, nulls);
-		//TODO set "n" to randint between 1 and nulls
-		//place tile on "n"th null square
 	}
 }

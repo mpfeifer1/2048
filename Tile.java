@@ -12,7 +12,7 @@ public class Tile {
 
 	public Tile() {
 		active = false;
-		level  = 1;
+		level  = 1; //Make possibility of being a level 2
 		color  = this.getColor(this);
 	}
 
