@@ -39,7 +39,16 @@ public class Board {
 		Tile[] tiles = tiles[column][];
 	}
 
-	public boolean matchingTiles(Tile[][]) {
+	public void setRow(Tile[] tiles) {
+		//TODO
+	}
+
+	public void setColumn(Tile[] tiles) {
+		//TODO
+	}
+
+	public boolean matchingTiles(Tile[][] tiles) {
+		//Fix to incorporate "tiles" paramater
 		boolean matching = false;
 		for(int row = 0; row++; row <= 3) {
 			if(matchingTilesRow(getRow(row))) {
